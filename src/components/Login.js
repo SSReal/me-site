@@ -61,6 +61,9 @@ const Hero = styled.img`
   @media (max-width: 830px) {
     height: 250px;
   }
+  @media (max-width: 750px) {
+    height: 200px;
+  }
 `
 const Splash = styled.div`
   display: flex;

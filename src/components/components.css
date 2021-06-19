@@ -26,7 +26,6 @@
     max-width: 564px;
     z-index: 0;
     margin: 10px 20px;
-
 }
 
 .featured {
@@ -65,4 +64,25 @@
 
 .show-hide-comments {
     cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+    .usercard {
+        display: none;
+    }
+    .featured {
+        display: none;
+    }
+    .posts {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+    .feed-post {
+        padding: 10px;
+        width: 90%;
+    }
 }

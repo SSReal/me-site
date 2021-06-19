@@ -32,7 +32,7 @@ const postTexts = [
         ]
     }
 ]
-const PostComponents = postTexts.map((p) => <FeedPost data = {p} />)
+const PostComponents = postTexts.map((p, idx) => <FeedPost key = {idx} data = {p} />)
 function Posts() {
     return (
         <div className = "posts">

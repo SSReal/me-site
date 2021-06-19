@@ -127,6 +127,9 @@ const SearchBar = styled.div`
     & > * {
         padding: 0px 5px;
     }
+    @media only screen and (max-width: 700px) {
+        display: none;
+    }
 `;
 
 const UserMenu = styled.div`
@@ -162,6 +165,10 @@ const UserDropDown = styled.div`
         visibility: visible;
         opacity: 100%;
     }
+    @media only screen and (max-width: 640px) {
+        width: fit-content;
+        right: 0px;
+    }
 `;
 
 const SignOutButton = styled.a`
@@ -184,13 +191,20 @@ const UserButton = styled.a`
 `;
 
 const MainContent = styled.div`
-    position: absolute;
+    position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: flex-start;
     background-color: #fffefc;
     top: 50px;
     width: 100%;
+    max-width: 1128px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @media only screen and (max-width: 800px) {
+        display: block;
+    }
 `;
 export default Home;
