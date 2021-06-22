@@ -4,7 +4,8 @@ const userInitialState = {
     logged_in: false,
     name: "",
     email: "",
-    displayPhoto: ""
+    displayPhoto: "",
+    id: -1, //invalid id
 };
 
 const userSlice = createSlice({
@@ -16,12 +17,14 @@ const userSlice = createSlice({
             state.name = action.payload.name;
             state.email = action.payload.email;
             state.displayPhoto = action.payload.displayPhoto;
+            state.id = action.payload.id;
         },
         logout: (state) => {
             state.logged_in = false;
             state.name = "";
             state.email = "";
             state.displayPhoto = "";
+            state.id = -1;
         }
     }
 })
